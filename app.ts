@@ -26,4 +26,27 @@ const schoolBook: Book[] = [
 
 const allBooks = [...util.GetAllBooks(), ...schoolBook];
 
-allBooks.forEach(book => printBookInfo(book));
+let poets = ['Shelley', 'Collins', 'Hughes'];
+let authors = ['Tolstoy', 'Fitzgerald', ...poets];
+
+
+const book = allBooks[1];
+let catalogLocation: [string, Book] = ['A 325.213', book];
+
+console.log(catalogLocation[0]);
+console.log(catalogLocation[1]);
+
+
+interface KeyValuePair<K, V> extends Array<K | V> {
+    0: K;
+    1: V;
+}
+
+const book1 = allBooks[2];
+let catalogLocation1: KeyValuePair<string, Book> = ['A 325.213', book1];
+
+console.log(catalogLocation1[0]);
+console.log(catalogLocation1[1]);
+
+
+
