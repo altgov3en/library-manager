@@ -24,11 +24,11 @@ export function Purge<T>(inventory: Array<T>): Array<T> {
 
 export function GetAllBooks(): Book[] {
 	
-	let books = [
-		{ id: 1, title: 'Ulysses', author: 'James Joyce', available: true, category: Category.Fiction },
-		{ id: 2, title: 'A Farewell to Arms', author: 'Ernest Hemingway', available: false, category: Category.Fiction },
-		{ id: 3, title: 'I Know Why the Caged Bird Sings', author: 'Maya Angelou', available: true, category: Category.Poetry },
-		{ id: 4, title: 'Moby Dick', author: 'Herman Melville', available: true, category: Category.Fiction }
+	let books: Book[] = [
+		{ id: 1, title: 'Ulysses', author: 'James Joyce', available: true, category: Category.Fiction, publisher: 'LitRes', hasIndex: false},
+		{ id: 2, title: 'A Farewell to Arms', author: 'Ernest Hemingway', available: false, category: Category.Fiction, publisher: 'LitRes', hasIndex: false  },
+		{ id: 3, title: 'I Know Why the Caged Bird Sings', author: 'Maya Angelou', available: true, category: Category.Poetry, publisher: 'LitRes', hasIndex: false },
+		{ id: 4, title: 'Moby Dick', author: 'Herman Melville', available: true, category: Category.Fiction, publisher: 'LitRes', hasIndex: false }
 	];
 	
 	return books;

@@ -1,13 +1,13 @@
 import { Category } from './enums';
 import { Book, Logger, Author, Librarian, Magazine } from './interfaces';
-import { UniversityLibrarian, ReferenceItem } from './classes';
+import { UniversityLibrarian, Employee, Researcher } from './classes';
 import * as util from './lib/utilityFunctions';
 
-const schoolBook: Book[] = [
-    { id: 10, author: 'J.K. Rowling', title: 'Harry Potter and The Goblet of Fire', available: true, category: Category.Children },
-    { id: 11, author: 'Anita Desai', title: 'Clear Light of Day', available: true, category: Category.Fiction },
-    { id: 12, author: 'Fyodor Dostoyevsky', title: 'Crime and Punishment', available: true, category: Category.History }
-]
+// const schoolBook: Book[] = [
+//     { id: 10, author: 'J.K. Rowling', title: 'Harry Potter and The Goblet of Fire', available: true, category: Category.Children },
+//     { id: 11, author: 'Anita Desai', title: 'Clear Light of Day', available: true, category: Category.Fiction },
+//     { id: 12, author: 'Fyodor Dostoyevsky', title: 'Crime and Punishment', available: true, category: Category.History }
+// ]
 
 /**
  * Destructuring arrays and objects
@@ -89,3 +89,32 @@ const schoolBook: Book[] = [
 
 // printReadingItem(allCatalogs[0]);
 // printReadingItem(allBooks[0]);
+
+// // contains all mandatory properties of the intersected types
+// let serialNovel: Book & Magazine = {
+//     author:'',
+//     available: true,
+//     id: 613,
+//     category: Category.Biography,
+//     publisher: '',
+//     title: '',
+
+// }
+
+
+/**
+ * Creating a Mixin
+ */
+
+// function applyMixin(destCtor: any, srcCtors: any[]) {
+//     srcCtors.forEach(ctor => {
+//         Object.getOwnPropertyNames(ctor.prototype).forEach(propName => {
+//             destCtor.prototype[propName] = ctor.prototype[propName];
+//         })
+//     })
+// }
+
+// applyMixin(UniversityLibrarian, [Employee, Researcher]);
+
+// let newLibrarian = new UniversityLibrarian();
+// newLibrarian.doResearch('Economics');

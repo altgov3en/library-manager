@@ -7,6 +7,6 @@
         "watch": true
     },
     "files": [
-        "app.ts"
+        "app-module-4.ts"
     ]
 }
